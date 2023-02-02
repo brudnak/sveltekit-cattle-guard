@@ -12,17 +12,6 @@ export const actions: Actions = {
 			password: body.password as string,
 		});
 
-		if (err) {
-			if (err instanceof AuthApiError && err.status === 400) {
-				return fail(400, {
-					error: "Invalid email or password",
-				});
-			}
-			return fail(500, {
-				error: "Server error. Please try again later.",
-			});
-		}
-
 		let myCheck = new RegExp(
 			"^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+.)?[a-zA-Z]+.)?(suse|suse).com$"
 		);
