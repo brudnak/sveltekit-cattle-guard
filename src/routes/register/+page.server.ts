@@ -1,6 +1,5 @@
 import { AuthApiError } from "@supabase/supabase-js";
-import { error, fail, redirect } from "@sveltejs/kit";
-import { sortUserPlugins } from "vite";
+import { fail, redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 
 export const actions: Actions = {
@@ -11,17 +10,6 @@ export const actions: Actions = {
 			email: body.email as string,
 			password: body.password as string,
 		});
-
-		let myCheck = new RegExp(
-			"^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+.)?[a-zA-Z]+.)?(suse|suse).com$"
-		);
-		let test = myCheck.test(body.email as string);
-
-		if (test === false) {
-			throw error(400, {
-				message: "Can only register a suse email address",
-			});
-		}
 
 		if (err) {
 			if (err instanceof AuthApiError && err.status === 400) {
@@ -34,6 +22,6 @@ export const actions: Actions = {
 			});
 		}
 
-		throw redirect(303, "/email");
+		throw redirect(303, "/");
 	},
 };
