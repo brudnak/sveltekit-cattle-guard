@@ -12,18 +12,6 @@ export const actions: Actions = {
 			password: body.password as string,
 		});
 
-		let myCheck = new RegExp(
-			"^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+.)?[a-zA-Z]+.)?(suse|suse).com$"
-		);
-		let test = myCheck.test(body.email as string);
-
-		if (test === false) {
-			throw error(400, {
-				message: "Can only register a suse email address",
-			});
-			return
-		}
-
 		if (err) {
 			if (err instanceof AuthApiError && err.status === 400) {
 				return fail(400, {
@@ -32,6 +20,17 @@ export const actions: Actions = {
 			}
 			return fail(500, {
 				error: "Server error. Please try again later.",
+			});
+		}
+
+		let myCheck = new RegExp(
+			"^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+.)?[a-zA-Z]+.)?(suse|suse).com$"
+		);
+		let test = myCheck.test(body.email as string);
+
+		if (test === false) {
+			throw error(400, {
+				message: "Can only register a suse email address",
 			});
 		}
 
