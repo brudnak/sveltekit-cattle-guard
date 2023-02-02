@@ -3,7 +3,7 @@
 
 <main>
 	<h1>Register</h1>
-	<form action="?/register" method="POST" class="auth-form">
+	<form action="?/register" method="POST" class="auth-form" autocomplete="off"> 
 		<label for=""> Email </label>
 		<input type="text" name="email" />
 		<label for=""> Password </label>

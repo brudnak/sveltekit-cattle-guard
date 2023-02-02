@@ -10,15 +10,24 @@
 	import { redirect, fail } from '@sveltejs/kit';
 
 
+	// @ts-ignore
+	function removeHttp(url) {
+		return url.replace(/^https?:\/\//, '');
+	  }
     
 export const actions = {
 	// @ts-ignore
 	default: async ({request}) => {
 		const values = await request.formData()
 
-        const url = values.get("url")
+        let url = values.get("url")
         const token = values.get("token")
-        let result = null
+
+		url = removeHttp(url)
+		url = url.endsWith('/') ? url.slice(0, -1) : url;
+
+		console.log("CLEAN URL:", url)
+
 
         let postUrl = `https://${url}/v3/openLdapConfigs/openldap?action=testAndApply`;
 		let jsonUrl = `https://${url}`;
@@ -76,7 +85,14 @@ export const actions = {
 			})
 		});
 
-		throw redirect(303, '/')
+		if (res.status === 200) {
+			throw redirect(303, '/success')
+		}
+
+		if (res.status != 200) {
+			
+		}
+
     }
 }
 

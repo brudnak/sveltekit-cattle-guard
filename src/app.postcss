@@ -1,14 +1,14 @@
-@import 'global.postcss';
+@import "global.postcss";
 
 $dark-300: hsl(213, 24%, 7%);
 $dark-200: hsl(222, 15%, 13%);
 $dark-100: hsl(222, 15%, 19%);
-$primary-300: hsl(149, 77%, 46%);
-$primary-200: hsl(149, 77%, 56%);
-$primary-100: hsl(149, 77%, 66%);
-$secondary-300: hsl(289, 90%, 53%);
-$secondary-200: hsl(289, 90%, 63%);
-$secondary-100: hsl(289, 90%, 73%);
+$primary-300: hsl(151, 74%, 46%);
+$primary-200: hsl(151, 74%, 56%);
+$primary-100: hsl(151, 74%, 66%);
+$secondary-300: hsl(227, 100%, 57%);
+$secondary-200: hsl(227, 100%, 67%);
+$secondary-100: hsl(227, 100%, 77%);
 $gray: hsl(212, 15%, 48%);
 
 body {
@@ -92,6 +92,16 @@ input {
 	&:focus {
 		outline: $primary-300 2px solid;
 	}
+}
+
+.main-card {
+	margin-top: 6em;
+	background-color: #83858c;
+	width: 80%;
+	height: 40%;
+	border-radius: 15px;
+	box-shadow: 0px 1px 2px 0px rgba(36, 83, 255, 0.7), 1px 2px 4px 0px rgba(36, 83, 255, 0.7),
+		2px 4px 8px 0px rgba(36, 83, 255, 0.7), 2px 4px 16px 0px rgba(36, 83, 255, 0.7);
 }
 
 .auth-form {

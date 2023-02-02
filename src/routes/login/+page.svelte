@@ -1,9 +1,12 @@
-<script lang="ts">
-</script>
+<script>
+	export let show
+	export let close
+	export let title
+  </script>
 
 <main>
 	<h1>Login</h1>
-	<form action="?/login" method="POST" class="auth-form">
+	<form action="?/login" method="POST" class="auth-form" autocomplete="off">
 		<label for=""> Email </label>
 		<input type="text" name="email" />
 		<label for=""> Password </label>
