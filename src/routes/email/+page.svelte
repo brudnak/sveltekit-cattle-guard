@@ -1,6 +1,6 @@
 <main>
     <h1>Success 🍾 Check your inbox for a confirmation email</h1>
-    <p>You <span class="email-warn">won't</span> be able to login until click the confirmation link in your email.</p>
+    <p>You <span class="email-warn">won't</span> be able to login until you click the confirmation link in your email.</p>
 </main>
 
 <style>
