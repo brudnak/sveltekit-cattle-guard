@@ -24,7 +24,7 @@
 		border-radius: 5px;
 		margin-top: 20px;
 		box-shadow: 0px 1px 2px 0px rgba(36, 83, 255, 0.7), 1px 2px 4px 0px rgba(36, 83, 255, 0.7),
-		2px 4px 8px 0px rgba(36, 83, 255, 0.7), 2px 4px 16px 0px rgba(36, 83, 255, 0.7);
+			2px 4px 8px 0px rgba(36, 83, 255, 0.7), 2px 4px 16px 0px rgba(36, 83, 255, 0.7);
 	}
 
 	input {
@@ -34,10 +34,6 @@
 
 	h2 {
 		color: #fff;
-	}
-
-	p {
-		color: #000;
 	}
 
 	button {

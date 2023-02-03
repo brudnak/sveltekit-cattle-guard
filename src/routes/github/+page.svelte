@@ -41,10 +41,6 @@
 		color: #fff;
 	}
 
-	p {
-		color: #000;
-	}
-
 	button {
 		border-radius: 5px;
 		text-transform: uppercase;
