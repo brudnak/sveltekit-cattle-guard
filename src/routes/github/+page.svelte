@@ -2,8 +2,8 @@
 </script>
 
 <div class="container">
+	<h4 class="soon">Coming Soon</h4>
 	<div class="neat">
-		<span class="soon">Coming Soon</span>
 		<div class="sub">
 			<h2>GitHub OAuth</h2>
 			<form action="/ldap" method="POST" class="auth-form" autocomplete="off">
@@ -48,14 +48,12 @@
 		cursor: not-allowed;
 	}
 
-	span {
+	h4 {
 		color: orange;
 		position: absolute;
-		font-size: 60px;
+		font-size: 30px;
 		z-index: 1;
-		rotate: 20deg;
-		top: 80%;
-		right: 37%;
+
 		text-transform: uppercase;
 		cursor: not-allowed;
 		letter-spacing: 5px;
