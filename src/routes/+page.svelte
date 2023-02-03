@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import type { PageData } from "./$types";
 
 	export let data: PageData;
-	import OpenLdap from './ldap/+page.svelte';
+	import OpenLdap from "./ldap/+page.svelte";
+	import GitHub from "./github/+page.svelte";
 </script>
 
 <main>
@@ -13,17 +14,20 @@
 			<button type="submit" class="btn btn-primary">Logout</button>
 		</form>
 
-		<OpenLdap />
+		<div class="container">
+			<OpenLdap />
+			<GitHub />
+		</div>
 	{:else}
-	<div class="container">
-		<div class="main-card">
-			<h1>Rancher Enable Auth Provider</h1>
-			<p>Quickly and easily enable auth providers in Rancher!</p>
-			<div class="auth-buttons">
-				<a href="/login" class="btn btn-primary">Login</a>
-				<a href="/register" class="btn btn-secondary">Register</a>
+		<div class="container">
+			<div class="main-card">
+				<h1>Rancher Enable Auth Provider</h1>
+				<p>Quickly and easily enable auth providers in Rancher!</p>
+				<div class="auth-buttons">
+					<a href="/login" class="btn btn-primary">Login</a>
+					<a href="/register" class="btn btn-secondary">Register</a>
+				</div>
 			</div>
 		</div>
-	</div>
 	{/if}
 </main>

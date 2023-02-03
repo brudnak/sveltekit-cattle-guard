@@ -13,7 +13,7 @@ export const actions: Actions = {
 
 		if (test === false) {
 			throw error(400, {
-				message: "Can only register a suse email address",
+				message: "You can only register with a valid SUSE email address.",
 			});
 		}
 
